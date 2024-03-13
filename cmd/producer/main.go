@@ -41,7 +41,7 @@ func (op *OrderPlacer) placeOrder(orderType string, size int) error {
 		log.Fatal(err)
 	}
 
-	<-op.deliverych
+	<- op.deliverych
 
 	fmt.Printf("Placed order on the queue: %s\n", format)
 

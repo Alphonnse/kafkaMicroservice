@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package kafkaModel;
+
+import "google/protobuf/timestamp.proto";
+
+// option go_package = "github.com/olezhek28/clean-architecture/pkg/user_v1;user_v1";
+option go_package = "github.com/Alphonnse/kafkaMicroservice/internal/kafka/modelProto;modelProto";
+
+
+
+message Termometer {
+	string topic = 1;
+	float temperature = 2;
+	float humidity = 3;
+	string location = 4;
+	google.protobuf.Timestamp timestamp = 5;
+}
+
